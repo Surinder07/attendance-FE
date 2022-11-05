@@ -47,7 +47,7 @@ const AddStudent = () => {
                         className='h-10 w-96 border mt-2 px-2 py-2'></input>
                     </div>
                     
-                    <div className="items-center justify-center  h-14 w-full">
+                    <div className="items-center justify-center  h-14 w-full my-4">
 
                         <label className="block">
                             Last Name
@@ -59,7 +59,7 @@ const AddStudent = () => {
                         className='h-10 w-96 border mt-2 px-2 py-2'></input>
                     </div>
 
-                    <div className="items-center justify-center  h-14 w-full">
+                    <div className="items-center justify-center  h-14 w-full my-4">
 
                         <label className="block">
                             Email
@@ -67,6 +67,28 @@ const AddStudent = () => {
                         <input type="email" 
                                name = "emailId"
                                value={student.emailId}
+                               onChange={(e) => handleChange(e)}
+                        className='h-10 w-96 border mt-2 px-2 py-2'></input>
+                    </div>
+                    <div className="items-center justify-center  h-14 w-full my-4">
+
+                        <label className="block">
+                            Phone
+                        </label>
+                        <input type="phone" 
+                               name = "phone"
+                               value={student.phone}
+                               onChange={(e) => handleChange(e)}
+                        className='h-10 w-96 border mt-2 px-2 py-2'></input>
+                    </div>
+                    <div className="items-center justify-center  h-14 w-full">
+
+                        <label className="block">
+                            Address
+                        </label>
+                        <input type="address" 
+                               name = "address"
+                               value={student.address}
                                onChange={(e) => handleChange(e)}
                         className='h-10 w-96 border mt-2 px-2 py-2'></input>
                     </div>
