@@ -8,7 +8,7 @@ const StudentList = () => {
     const navigate = useNavigate();
 
     const [loading, setloading] = useState(true)
-    const [students, setstudent] = useState([null]);
+    const [students, setStudent] = useState([null]);
 
     useEffect(() => {
      
@@ -16,7 +16,7 @@ const StudentList = () => {
             setloading(true);
             try {
                 const response = await studentService.getStudents();
-                setstudent(response.data)
+                setStudent(response.data)
             } catch (error) {
                 console.log(true);
             }
