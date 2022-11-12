@@ -1,19 +1,12 @@
-image: node:16
-
-pipelines:
-  default:
-    - parallel:
-        - step:
-            name: Build and Test
-            caches:
-              - node
-            script:
-              - npm install
-              - npm test
-        - step:
-            name: Code linting
-            script:
-              - npm install eslint
-              - npx eslint .
-            caches:
-              - node
+pipeline {
+  agent any
+  
+  stages { 
+    stage('Init') {
+       steps {
+         sh 'echo hello'
+       }
+       
+    }
+  }
+}
