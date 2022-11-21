@@ -12,6 +12,11 @@ class studentService{
     getStudents(){
         return axios.get(STUDENT_API_GET_BASE_URL);
     }
+    deleteStudents(students, id){
+        return axios.delete(STUDENT_API_GET_BASE_URL,students.filter(student=>{
+            return student.studentId === id
+        }))
+    }
 }
 
 export default new studentService();
