@@ -1,4 +1,4 @@
-Original file 
+                                                       Original file 
 
 
 import './App.css';
@@ -30,7 +30,7 @@ export default App;
 
 
 
-CHANGED FILE
+                                                             CHANGED FILE
 
 
 import './App.css';
@@ -118,5 +118,73 @@ function App() {
 }
 
 export default App;
+
+
+                                                            ADD NEW HOME PAGE :
+
+
+import React from "react";
+import './home.css';
+
+
+
+
+function Home()
+{
+    const myStyle={
+        backgroundImage: 
+ "url('https://i.imgur.com/YDwNPZg.jpg')",
+        height:'100vh',
+        marginTop:'-70px',
+        fontSize:'40px',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        justifyContent:"right"
+    };
+   
+    return(
+       <div>
+      <div style={myStyle} >
+        
+              <h1 style={{textAlign:"Center", marginTop:"0", padding:80}}>Welcome to STudent Attendence System </h1> 
+                         
+              </div>
+             
+              <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                            <div class="footer-contact">
+                                <h3>Office Contact</h3>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, Ontario, Canada</p>
+                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                             
+                        </div>
+                            
+                    
+                
+                <div class=" footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+            
+                <div class=" copyright">
+                     <p>&copy; <a href="#">Student Attendence System</a>, All Right Reserved.</p>
+                        
+					</div>
+                    </div>
+                    </div>
+            
+    </div>
+
+
+ 
+
+
+ );
+}
+export default Home;
 
 
