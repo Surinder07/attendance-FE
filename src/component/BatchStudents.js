@@ -1,31 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ClipLoader} from 'react-spinners';
 import { StudentState } from '../context/Context';
-import TableData from './TableData';
+import TableData from './TableData'
+import { Link } from 'react-router-dom'
+import { ClipLoader } from 'react-spinners';
 
-const StudentList = () => {
+const BatchStudents = () => {
+
+    // do not need this if we fix getstudents apis and fill the batch array. we can reuse the student list component
 
     const { students, setStudents, error, loading, setEditStudent } = StudentState()
-    
-    const tableHeadings = ['First Name', 'Last Name', 'Email', 'Phone', 'Address', 'Action']
 
-    const deleteEntry = (id) => {
-        //    axios.delete("http://3.137.206.69:8085/students/allStudents", students.filter(student => student.studentId === id))
-        setStudents(students.filter(student => {
-            return student.studentId !== id
-        }))
-    }
+    const tableHeadings = ['First Name', 'Last Name', 'Email', 'Phone', 'Address']
 
-    const editEntry = (id) =>{
-        setEditStudent(students.filter(student => {
-            return student.studentId === id
-        }))
-    }
     console.log(students)
 
-    return (
-        <div className='container mx-auto my-8 w-screen h-screen'>
+    // const filteredStudents = students.filter
+
+  return (
+    <div className='container mx-auto my-8 w-screen h-screen'>
 
             <div className="h-12">
                 <Link to='/addStudent'><button
@@ -52,13 +44,13 @@ const StudentList = () => {
                             </tr>
                         </thead>
 
-                        <TableData students={students} deleteEntry={deleteEntry} editEntry={editEntry} />
+                        <TableData students={students} />
 
                     </table>)}
 
             </div>
         </div>
-    )
+  )
 }
 
-export default StudentList
+export default BatchStudents
